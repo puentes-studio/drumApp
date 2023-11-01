@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr 2rem;
+    height: 100%;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);}
+nav ul li {
+    list-style: none;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:active {
+    color: rgb(45, 245, 238);
+}
+
+container {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 11rem 1fr;
+}
+.padTable {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.pad {
+    aspect-ratio: 1;
+    background-color: #434343;
+    background: radial-gradient(circle at center, #969696, transparent 20%, transparent 35%);  
+     background-blend-mode: lighten;
+    }
+
+
+/* CSS */
+button.pad {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+  
+
+button.pad:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.padTable button.pad:nth-child(1):active {
+    background-color: rgb(247, 247, 114, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(2):active {
+    background-color: rgb(60, 251, 92, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(3):active {
+    background-color: rgb(69, 220, 246, 0.7);
+  }
+  .padTable button.pad:nth-child(4):active {
+    background-color: rgb(248, 127, 244, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(5):active {
+    background-color: rgb(134, 134, 248, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(6):active {
+    background-color: rgb(68, 234, 68, 0.7);
+  }
+  .padTable button.pad:nth-child(7):active {
+    background-color: rgb(251, 146, 154, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(8):active {
+    background-color: rgb(245, 210, 72, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(9):active {
+    background-color: rgb(102, 198, 239, 0.7);
+  }
+  .padTable button.pad:nth-child(10):active {
+    background-color: rgb(207, 123, 253, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(11):active {
+    background-color: rgb(136, 249, 102, 0.7);
+  }
+  
+  .padTable button.pad:nth-child(12):active {
+    background-color: rgb(199, 145, 246, 0.7);
+  }
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
