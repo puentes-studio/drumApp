@@ -5,18 +5,30 @@
 body {
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
     background-blend-mode: multiply,multiply;
+    font-family: 'Bebas Neue', sans-serif;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem 1fr 2rem;
-    height: 100%;
+    grid-template-rows: 3rem 1fr 3rem;
+    height: 100vh;
 }
 
-
+.navBar {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+}
+nav h1 {
+    align-items: center;
+    display: flex;
+    color: #00ff1a;
+    margin-left: 4rem
+}
 nav ul {
     display: flex;
     flex-direction: row-reverse;
     gap: 5px;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);}
+}
+    
 nav ul li {
     list-style: none;
     padding: 1rem 2.5rem 1rem 2.5rem;
@@ -30,98 +42,149 @@ nav ul li a:active {
 }
 
 container {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    display: grid;
+    background: linear-gradient(to top, #131313 0%, #1f1f1f 100%);     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 11rem 1fr;
 }
+
+.volume-container {
+    padding: 40px 0px;
+    margin: 0px 20px;
+  }
+  
+.volume-range {
+    height: 5px;
+    width: 250px;
+    background: #555;
+    border-radius: 15px;
+  }
+  
+.volume-range>.volume {
+    height: 5px;
+    width: 50px;
+    background: #2ecc71;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    position: relative;
+  }
+  
+.volume-range>.volume>.volume-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #FFF;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    outline: none;
+    pointer-events: none;
+  }
+
 .padTable {
     margin: 15px;
     display: grid;
-    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, minmax(60px, 1fr));
     gap: 10px;
+    align-content: baseline;
 }
 
-.pad {
-    aspect-ratio: 1;
-    background-color: #434343;
-    background: radial-gradient(circle at center, #969696, transparent 20%, transparent 35%);  
-     background-blend-mode: lighten;
-    }
-
-
-/* CSS */
 button.pad {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at center, #3a3939, #4f4d4d 20%, #565656);
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    /* user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; */
+}
+  
+button.pad:nth-child(1):active {
+    background: radial-gradient(circle at center, #f86748, #FF4000 20%, #FF2B00);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(2):active {
+    background: radial-gradient(circle at center, #f95ae4, #ff00e6 20%, #ee00ff);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(3):active {
+    background: radial-gradient(circle at center, #ddfc8d, #b7fa0c 20%, #b7ff00);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(4):active {
+    background: radial-gradient(circle at center, #ae6bf6, #8b2cf0 20%, #841df2);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(5):active {
+    background: radial-gradient(circle at center, #77dafb, #17c0f9 20%, #00bfff);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(6):active {
+    background: radial-gradient(circle at center, #f0ce7d, #f6b111 20%, #ffb300);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(7):active {
+    background: radial-gradient(circle at center, #a69af6, #3618f7 20%, #2200ff);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(8):active {
+    background: radial-gradient(circle at center, #e8f5b7, #cbf916 20%, #ccff00);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(9):active {
+    background: radial-gradient(circle at center, #a3e0fa, #1cb9fd 20%, #00b3ff);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(10):active {
+    background: radial-gradient(circle at center, #b1f6b8, #15f72c 20%, #00ff1a);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(11):active {
+    background: radial-gradient(circle at center, #9eebf2, #23e4f6 20%, #00eaff);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+button.pad:nth-child(12):active {
+    background: radial-gradient(circle at center, #f86748, #FF4000 20%, #FF2B00);
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
 }
   
 
-button.pad:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
+@media (max-width: 760px) {
+    .padTable {
+    grid-template-columns: repeat(3, minmax(60px, 1fr));
+}
 }
 
-.padTable button.pad:nth-child(1):active {
-    background-color: rgb(247, 247, 114, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(2):active {
-    background-color: rgb(60, 251, 92, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(3):active {
-    background-color: rgb(69, 220, 246, 0.7);
-  }
-  .padTable button.pad:nth-child(4):active {
-    background-color: rgb(248, 127, 244, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(5):active {
-    background-color: rgb(134, 134, 248, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(6):active {
-    background-color: rgb(68, 234, 68, 0.7);
-  }
-  .padTable button.pad:nth-child(7):active {
-    background-color: rgb(251, 146, 154, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(8):active {
-    background-color: rgb(245, 210, 72, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(9):active {
-    background-color: rgb(102, 198, 239, 0.7);
-  }
-  .padTable button.pad:nth-child(10):active {
-    background-color: rgb(207, 123, 253, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(11):active {
-    background-color: rgb(136, 249, 102, 0.7);
-  }
-  
-  .padTable button.pad:nth-child(12):active {
-    background-color: rgb(199, 145, 246, 0.7);
-  }
-
-@media (min-width: 768px) {
-  .button-54 {
-    padding: 0.25em 0.75em;
-  }
+@media (min-width: 760px) and (max-width: 900px) {
+    .padTable {
+    grid-template-columns: repeat(4, minmax(60px, 1fr));
+}
 }
