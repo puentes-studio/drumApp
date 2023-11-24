@@ -23,22 +23,37 @@ nav h1 {
     color: #00ff1a;
     margin-left: 4rem
 }
-nav ul {
+.nav-list {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 5px;
+    margin: 0;
+    padding: 0;
 }
     
-nav ul li {
+.nav-list li {
     list-style: none;
     padding: 1rem 2.5rem 1rem 2.5rem;
 }
-nav ul li a {
+.nav-list a {
     text-decoration: none;
     color: white;
 }
-nav ul li a:active {
+.nav-list a:active {
     color: rgb(45, 245, 238);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 5px;
+    width: 39px;
+    background-color: rgb(195, 253, 3);
+    margin: 3px 0;
+    display: block;
+    transition: background-color 0.3s;
 }
 
 container {
@@ -54,7 +69,7 @@ container {
   
 .volume-range {
     height: 5px;
-    width: 250px;
+    width: 24%;
     background: #555;
     border-radius: 15px;
   }
@@ -178,13 +193,119 @@ button.pad:nth-child(12):active {
   
 
 @media (max-width: 760px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .nav-list li {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .nav-list.show {
+        display: flex;
+        display: flex;
+        z-index: 1;
+        margin-top: -0.4rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        display: flex;
+        margin-right: 2rem;
+        margin-top: 0.5rem;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 11px;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg);
+        top: -11px;
+    }
+
+    .volume-range {
+        width: 60%;
+      }
+
+ 
+
     .padTable {
-    grid-template-columns: repeat(3, minmax(60px, 1fr));
+        grid-template-columns: repeat(2, minmax(60px, 2fr));
 }
 }
 
+
+
+
 @media (min-width: 760px) and (max-width: 900px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .nav-list li {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .nav-list.show {
+        display: flex;
+        display: flex;
+        z-index: 1;
+        margin-top: -0.4rem;
+    }
+
+   
+
+    .menu-toggle {
+        display: flex;
+        display: flex;
+        margin-right: 2rem;
+        margin-top: 0.5rem;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 11px;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg);
+        top: -11px;
+    }
+
+    .volume-range {
+        width: 60%;
+      }
+
     .padTable {
-    grid-template-columns: repeat(4, minmax(60px, 1fr));
+        grid-template-columns: repeat(4, minmax(60px, 1fr));
+    }
+    
 }
-}
+
+  

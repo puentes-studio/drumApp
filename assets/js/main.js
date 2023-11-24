@@ -1,4 +1,8 @@
-
+document.getElementById('mobile-menu').addEventListener('click', function () {
+    var navList = document.querySelector('.nav-list');
+    this.classList.toggle('active');
+    navList.classList.toggle('show');
+});
 
 
 // // THIS IS THE VOLUME KNOB --------------------------------------------
@@ -113,7 +117,7 @@
 
 // THESE ARE THE PADS -------------------------------------------------
 function soundKick00() {
-    var snd = new Audio('assets/drums/CymaticsOrchidKickTight.wav'); 
+    const snd = new Audio('assets/drums/hihat-close.wav'); 
 
 
     document.addEventListener('keydown', function(event) {
@@ -137,46 +141,46 @@ function soundKick00() {
 
 
 function soundKick01() {
-    var snd = new Audio('assets/drums/CymaticsOrchidKickClean.wav')//wav is also supported
+    const snd = new Audio('assets/drums/hihat-open.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundKick02() {
-    var snd = new Audio('assets/drums/CymaticsOrchidKickDancehall.wav')//wav is also supported
+    const snd = new Audio('assets/drums/kick.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundSnare01() {
-    var snd = new Audio('assets/drums/CymaticsOrchidSnareLustbug.wav')//wav is also supported
+    const snd = new Audio('assets/drums/ride.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundSnare02() {
-    var snd = new Audio('assets/drums/CymaticsOrchidSnareWanted.wav')//wav is also supported
+    const snd = new Audio('assets/drums/snare.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundClap() {
-    var snd = new Audio('assets/drums/CymaticsOrchidSnapHefty.wav')//wav is also supported
+    const snd = new Audio('assets/drums/tom-high.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundHiHat() {
-    var snd = new Audio('assets/drums/CymaticsOrchidHihatOpen.wav')//wav is also supported
+    const snd = new Audio('assets/drums/tom-low.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundHiHatClosed() {
-    var snd = new Audio('assets/drums/CymaticsOrchidHihatClosed2.wav')//wav is also supported
+    const snd = new Audio('assets/drums/tom-mid.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundSplash01() {
-    var snd = new Audio('assets/drums/CymaticsOrchidCrashPerfect.wav')//wav is also supported
+    const snd = new Audio('assets/drums/CymaticsOrchidCrashPerfect.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundSplash02() {
-    var snd = new Audio('assets/drums/CymaticsOrchidCrashLightHighs.wav')//wav is also supported
+    const snd = new Audio('assets/drums/CymaticsOrchidCrashLightHighs.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundRide() {
-    var snd = new Audio('assets/drums/CymaticsOrchidRideMysterious.wav')//wav is also supported
+    const snd = new Audio('assets/drums/CymaticsOrchidRideMysterious.wav')//wav is also supported
     snd.play()//plays the sound
 }
 function soundTom() {
-    var snd = new Audio('assets/drums/CymaticsOrchidKickLayered.wav')//wav is also supported
+    const snd = new Audio('assets/drums/CymaticsOrchidKickLayered.wav')//wav is also supported
     snd.play()//plays the sound
 }
